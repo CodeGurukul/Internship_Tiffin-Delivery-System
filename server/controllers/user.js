@@ -40,6 +40,11 @@ exports.getOrders = function(req,res){
 
             res.render('orders');
 }
+exports.getAdLogin = function(req,res){
+
+            res.render('adlogin');
+}
+
 
 
 exports.postSignUp = function(req,res){
@@ -49,7 +54,9 @@ exports.postSignUp = function(req,res){
             firstname: req.body.firstname,lastname: req.body.lastname,
             email: req.body.email, password: req.body.password,
             address: req.body.address,
-            mobile: req.body.mobile
+            mobile: req.body.mobile,
+            tiffinBarcode: req.body.tiffinBarcode,
+            bagBarcode: req.body.bagBarcode
           }
           );
 
@@ -58,6 +65,20 @@ exports.postSignUp = function(req,res){
       
             }
 
+exports.postAdLogin = function(req,res, next){
+    passport.authenticate('local',function(err, user, info) {
+      if (err) return next(err);
+      if (!user) {
+        console.log('errors');
+        return res.redirect('/');
+      }
+      req.logIn(user, function(err) {
+        if (err) return next(err);
+        console.log('Success! You are logged in.');
+        res.render('admin');
+      });
+    })(req, res, next);
+}
 exports.postLogin = function(req,res, next){
     passport.authenticate('local',function(err, user, info) {
       if (err) return next(err);
@@ -68,7 +89,7 @@ exports.postLogin = function(req,res, next){
       req.logIn(user, function(err) {
         if (err) return next(err);
         console.log('Success! You are logged in.');
-        res.redirect('/');
+        res.render('contact');
       });
     })(req, res, next);
 }
@@ -114,7 +135,7 @@ exports.postContact = function(req,res, next){
           );
           
            user.save();
-           res.redirect('/');
+           res.render('done');
       
             }
 

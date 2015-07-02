@@ -53,8 +53,8 @@ app.get('/', homeController.getIndex);
 app.get('/signout', userController.getSignOut);
 app.get('/register', userController.getRegister);
 app.post('/register', userController.postSignUp);
-app.post('/login', userController.postLogin);
-app.get('/login', userController.getLogin);
+app.post('/adlogin', userController.postAdLogin);
+app.get('/adlogin', userController.getAdLogin);
 app.post('/checkin', userController.postCheckIn);
 app.post('/checkout', userController.postCheckOut);
 app.get('/home', userController.getHome);
@@ -64,7 +64,10 @@ app.get('/ourmenu', userController.getOurMenu);
 app.get('/gallery', userController.getGallery);
 app.get('/checkout', userController.getCheckout);
 app.get('/orders', userController.getOrders);
+app.post('/login', userController.postLogin);
+app.get('/login', userController.getLogin);
 app.post('/contact', userController.postContact);
+
 
 
 

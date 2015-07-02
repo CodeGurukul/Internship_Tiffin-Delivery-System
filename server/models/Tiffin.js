@@ -11,6 +11,8 @@ var tiffinSchema = new mongoose.Schema({
   password:{type:String},
   address: {type:String},
   mobile: {type:String},
+  tiffinBarcode: {type:String},  //entered by admin manually directly in the databse
+  bagBarcode: {type:String},     //entered by admin manually directly in the databse
 
   resetPasswordToken: String,
   resetPasswordExpires: Date  

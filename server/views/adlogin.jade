@@ -70,8 +70,7 @@ html
                 li
                   a(href='/ourmenu') OUR MENU
                 li
-                  a.active(href='/gallery') GALLERY
-        
+                  a(href='/gallery') GALLERY
                 .clearfix
               // script for menu
               script.
@@ -83,7 +82,7 @@ html
               // //script for menu
             // point burst circle
             .logo
-              a(href='/')
+              a(href='/index')
                 .burst-36
                   div
                     div
@@ -92,66 +91,23 @@ html
                 h1 DABBAWALA
             // //point burst circle
     // //banner
-    // gallery-page
-    .gallery
+    // login-page
+    .login
       .container
-        .gallery-info
-          h3 GALLERY
-          .strip-line.st-border
-        .gallery-grids
-          .col-md-4.gallery-grid.gallery1
-            a.swipebox(href='images/k1.jpg')
-              img.img-responsive(src='images/k1.jpg', alt='/')
-              .textbox
-                p SPECIAL OFFER
-          .col-md-4.gallery-grid.gallery1
-            a.swipebox(href='images/k2.jpg')
-              img.img-responsive(src='images/k2.jpg', alt='/')
-              .textbox
-                p SPECIAL OFFER
-          .col-md-4.gallery-grid.gallery1
-            a.swipebox(href='images/k3.jpg')
-              img.img-responsive(src='images/k3.jpg', alt='/')
-              .textbox
-                p SPECIAL OFFER
-          .col-md-4.gallery-grid.gallery1
-            a.swipebox(href='images/k4.jpg')
-              img.img-responsive(src='images/k4.jpg', alt='/')
-              .textbox
-                p SPECIAL OFFER
-          .col-md-4.gallery-grid.gallery1
-            a.swipebox(href='images/k5.jpg')
-              img.img-responsive(src='images/k5.jpg', alt='/')
-              .textbox
-                p SPECIAL OFFER
-          .col-md-4.gallery-grid.gallery1
-            a.swipebox(href='images/k6.jpg')
-              img.img-responsive(src='images/k6.jpg', alt='/')
-              .textbox
-                p SPECIAL OFFER
-          .col-md-4.gallery-grid.gallery1
-            a.swipebox(href='images/k7.jpg')
-              img.img-responsive(src='images/k7.jpg', alt='/')
-              .textbox
-                p SPECIAL OFFER
-          .col-md-4.gallery-grid.gallery1
-            a.swipebox(href='images/k8.jpg')
-              img.img-responsive(src='images/k8.jpg', alt='/')
-              .textbox
-                p SPECIAL OFFER
-          .col-md-4.gallery-grid.gallery1
-            a.swipebox(href='images/k1.jpg')
-              img.img-responsive(src='images/k1.jpg', alt='/')
-              .textbox
-                p SPECIAL OFFER
-          .clearfix  
-        link(rel='stylesheet', href='css/swipebox.css')
-        script(src='js/jquery.swipebox.min.js')
-        script(type='text/javascript').
-          jQuery(function($) {
-          $(".swipebox").swipebox();
-          });
-    // //gallery-page
+        .login-grids
+          .col-md-12.log
+            h3 ADMIN LOGIN
+            form(action='/adlogin' method='post')
+              h5 Email:
+              br
+              input.form-control(type='email' placeholder='Email' name="email")
+              br
+              h5 Password:
+              br
+              input.form-control(type='password' placeholder='Password' name="password")
+              br
+              input(type='submit', value='LOGIN')
+          
     // footer-top
     .footer-top
       .container
