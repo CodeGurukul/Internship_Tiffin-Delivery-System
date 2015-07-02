@@ -5,11 +5,12 @@ var bcrypt= require('bcrypt-nodejs');
 
 //User Schema
 var tiffinSchema = new mongoose.Schema({
+  firstname: {type:String},
+  lastname: {type:String},
   email: { type: String, unique: true, lowercase: true },
   password:{type:String},
-  tiffin:{tiffinBarcode: {type:String , unique:true}},
-  bag:{bagBarcode: {type:String , unique:true}, 
-       address: {type:String}},
+  address: {type:String},
+  mobile: {type:String},
 
   resetPasswordToken: String,
   resetPasswordExpires: Date  

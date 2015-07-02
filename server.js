@@ -50,11 +50,20 @@ console.log('local mongodb opened');
 
 app.get('/', homeController.getIndex);
 app.get('/signout', userController.getSignOut);
-app.get('/signup', userController.getSignUp);
-app.post('/signup', userController.postSignUp);
-app.post('/signin', userController.postSignIn);
+app.get('/register', userController.getRegister);
+app.post('/register', userController.postSignUp);
+app.post('/login', userController.postLogin);
+app.get('/login', userController.getLogin);
 app.post('/checkin', userController.postCheckIn);
 app.post('/checkout', userController.postCheckOut);
+app.get('/home', userController.getHome);
+app.get('/about', userController.getAbout);
+app.get('/contact', userController.getContact);
+app.get('/ourmenu', userController.getOurMenu);
+app.get('/gallery', userController.getGallery);
+app.get('/checkout', userController.getCheckout);
+app.get('/orders', userController.getOrders);
+
 
 
 

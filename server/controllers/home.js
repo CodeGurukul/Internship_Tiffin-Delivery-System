@@ -2,5 +2,5 @@
 
 exports.getIndex = function(req,res){
 
-            res.render('front');
+            res.render('index');
 }
