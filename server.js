@@ -9,6 +9,7 @@ var MongoStore = require('connect-mongo')(session);
 var Tiffin = require('./server/models/Tiffin');
 var Checkout = require('./server/models/Checkout');
 var Checkin = require('./server/models/Checkin');
+var Contact = require('./server/models/Contact');
 
 
 
@@ -63,6 +64,7 @@ app.get('/ourmenu', userController.getOurMenu);
 app.get('/gallery', userController.getGallery);
 app.get('/checkout', userController.getCheckout);
 app.get('/orders', userController.getOrders);
+app.post('/contact', userController.postContact);
 
 
 

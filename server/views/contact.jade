@@ -96,15 +96,15 @@ html
           .contact-info
             h3 CONTACT FORM
             .strip-line
-          form
+          form(action='/contact' method='post')
             .contact-left
-              input(type='text', placeholder='Name', required='')
-              input(type='text', placeholder='E-mail', required='')
-              input(type='text', placeholder='Subject', required='')
+              input.form-control(type='email' placeholder='Email' name="email")
+              br
+              input.form-control(type='text' placeholder='Subject' name="subject")
             .contact-right
-              textarea(placeholder='Message', required='')
+              textarea.form-control(type='text' placeholder='Message' name="message")
             .clearfix
-            input(type='submit', value='SUBMIT')
+            button.btn.btn-default(type='submit') Submit
     // //contact-page
     // footer-top
     .footer-top

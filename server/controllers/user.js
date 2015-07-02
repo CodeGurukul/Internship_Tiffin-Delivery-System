@@ -2,6 +2,7 @@ var passport = require('passport');
 var Tiffin = require('../models/Tiffin'); 
 var Checkout = require('../models/Checkout'); 
 var Checkin = require('../models/Checkin'); 
+var Contact = require('../models/Contact'); 
 
 exports.getLogin = function(req,res){
 
@@ -53,7 +54,7 @@ exports.postSignUp = function(req,res){
           );
 
             user.save();
-            res.render('index');
+            res.redirect('/');
       
             }
 
@@ -67,7 +68,7 @@ exports.postLogin = function(req,res, next){
       req.logIn(user, function(err) {
         if (err) return next(err);
         console.log('Success! You are logged in.');
-        res.render('login');
+        res.redirect('/');
       });
     })(req, res, next);
 }
@@ -101,6 +102,22 @@ exports.postCheckOut = function(req,res, next){
             user.save();
             res.send('You are succesfully checked out');
          }
+
+exports.postContact = function(req,res, next){
+  var user = new Contact
+        (
+          {
+            email: req.body.email,
+            subject: req.body.subject,
+            message: req.body.message
+          }
+          );
+          
+           user.save();
+           res.redirect('/');
+      
+            }
+
             
 
 
