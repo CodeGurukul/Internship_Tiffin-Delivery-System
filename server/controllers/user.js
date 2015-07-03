@@ -90,6 +90,9 @@ exports.postLogin = function(req,res, next){
         if (err) return next(err);
         console.log('Success! You are logged in.');
         res.render('contact');
+        //Tiffin.find(function(err,tiffins){
+            //res.render('entrydetail',{tiffin:tiffins});
+ 
       });
     })(req, res, next);
 }
