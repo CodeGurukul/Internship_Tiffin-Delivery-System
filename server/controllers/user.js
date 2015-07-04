@@ -33,10 +33,6 @@ exports.getGallery = function(req,res){
 
             res.render('gallery');
 }
-exports.getCheckout = function(req,res){
-
-            res.render('checkout');
-}
 exports.getOrders = function(req,res){
 
             res.render('orders');
