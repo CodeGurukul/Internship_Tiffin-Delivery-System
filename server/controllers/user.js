@@ -136,20 +136,35 @@ exports.postCheckOut = function(req,res, next){
             res.send('You are succesfully checked out');
          }
 
-exports.postContact = function(req,res, next){
-  var user = new Contact
-        (
-          {
-            email: req.body.email,
-            subject: req.body.subject,
-            message: req.body.message
-          }
-          );
+// exports.postContact = function(req,res, next){
+//   var user = new Contact
+//         (
+//           {
+//             email: req.body.email,
+//             subject: req.body.subject,
+//             message: req.body.message
+//           }
+//           );
           
-           user.save();
-           res.render('done');
+//            user.save();
+//            res.render('done');
       
-            }
+//             }
+exports.postContact = function(req,res,next){
+
+            if(req.body.veg)
+              var veg = true;
+            if(req.body.nonveg)
+              var nveg = true; 
+            if(req.body.lunch)
+              var lunch = true; 
+            if(req.body.dinner)
+              var dinner = true; 
+            var contact = new Contact ({lunch:lunch,dinner:dinner,veg: veg, nveg:nveg, subject:req.body.subject, message:req.body.message});
+            contact.save();
+            res.render('done');
+
+}
 
             
 
