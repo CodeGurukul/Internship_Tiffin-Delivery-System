@@ -1,9 +1,9 @@
 var mongoose= require('mongoose');
 
 var contactSchema = new mongoose.Schema({
-  email: String,
-  subject: String,
-  message: String
+  email: {type: String, required: true},
+  subject: {type: String, required: true},
+  message: {type: String, required: true}
 });
 
 

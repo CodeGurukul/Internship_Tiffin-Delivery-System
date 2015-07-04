@@ -10,6 +10,7 @@ var Tiffin = require('./server/models/Tiffin');
 var Checkout = require('./server/models/Checkout');
 var Checkin = require('./server/models/Checkin');
 var Contact = require('./server/models/Contact');
+var Admin = require('./server/models/Admin');
 
 
 
