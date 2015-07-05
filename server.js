@@ -63,6 +63,7 @@ app.get('/about', userController.getAbout);
 app.get('/contact', userController.getContact);
 app.get('/ourmenu', userController.getOurMenu);
 app.get('/gallery', userController.getGallery);
+app.get('/checkout', userController.getCheckout);
 app.get('/orders', userController.getOrders);
 app.post('/login', userController.postLogin);
 app.get('/login', userController.getLogin);

@@ -63,9 +63,6 @@ text-decoration:none;
 .login-section ul li a:hover{
 	color:#000000;
 }
-.wrapper{
-  text-align: center;
-}
 .sb-search {
 	width: 0%;
 	position: absolute;
@@ -1036,10 +1033,7 @@ border-radius:0%;
 .login {
   padding:100px 0;
 }
-.type{
-  color:red;
-  font-weight: bold;
-}
+
 .log form input[type="password"] {
   margin-right: 58px;
 }
