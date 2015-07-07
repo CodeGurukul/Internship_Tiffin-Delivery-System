@@ -94,57 +94,10 @@ html
                 h1 DABBAWALA
             // //point burst circle
     // //banner
-    // registration-form
-    .registration-form
-      .container
-        h3 Registration
-        .strip
-        .registration-grids
-          .reg-form
-            .reg
-              p Welcome, please enter the following details to continue.
-              p
-                | If you have previously registered with us, 
-                a(href='/login') click here
-              form(action='/register' method='post')
-                ul
-                  li.text-info First Name: 
-                  li
-                    input.form-control(type='' placeholder='First Name' name="firstname" required)
-                ul
-                  li.text-info Last Name: 
-                  li
-                    input.form-control(type='' placeholder='Last Name' name="lastname")
-                ul
-                  li.text-info Email: 
-                  li
-                    input.form-control(type='email' placeholder='Email' name="email" required)
-                ul
-                  li.text-info Password: 
-                  li
-                    input.form-control(type='password' placeholder='Password' name="password" required)
-                ul
-                  li.text-info Address:
-                  li
-                    input.form-control(type='' placeholder='Address' name="address" required)
-                ul
-                  li.text-info Mobile Number:
-                  li
-                    input.form-control(type='' placeholder='Mobile Number' name="mobile" required)
-                input(type='submit', value='REGISTER NOW')
-          .reg-right
-            h3 Completely Free Account
-            .strip
-            p
-              | You can create an Account for free !!! 
-              br
-              | Just enter your details and make one now......
-            h3 Privacy Policy
-            .strip
-            p
-              | We don't use your data for any advertisement purposes.It is solely for user identification......
-          .clearfix
-    // registration-form
+    .container-fluid
+              .jumbotron
+                  h2 You have been successfully registered !!! 
+
     // footer-top
     .footer-top
       .container

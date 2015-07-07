@@ -105,11 +105,11 @@
             form(action='/login' method='post')
               h5 Email:
               br
-              input.form-control(type='email' placeholder='Email' name="email")
+              input.form-control(type='email' placeholder='Email' name="email" required)
               br
               h5 Password:
               br
-              input.form-control(type='password' placeholder='Password' name="password")
+              input.form-control(type='password' placeholder='Password' name="password" required)
               br
               input(type='submit', value='LOGIN')
           .col-md-6.login-right

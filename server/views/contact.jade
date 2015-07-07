@@ -53,11 +53,11 @@ html
             .strip-line
           form(action='/contact' method='post')
             .contact-left
-              input.form-control(type='email' placeholder='Email' name="email")
+              input.form-control(type='email' placeholder='Email' name="email" required)
               br
-              input.form-control(type='text' placeholder='Address of the delivery' name="subject")
+              input.form-control(type='text' placeholder='Address of the delivery' name="subject" required)
             .contact-right
-              textarea.form-control(type='text' placeholder='Order Details' name="message")
+              textarea.form-control(type='text' placeholder='Order Details' name="message" required)
             .clearfix
             button.btn.btn-default(type='submit') Submit
     // //contact-page

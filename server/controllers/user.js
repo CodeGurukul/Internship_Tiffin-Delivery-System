@@ -71,7 +71,8 @@ exports.postSignUp = function(req,res){
           );
 
             user.save();
-            res.redirect('/');
+
+            res.render('reg.jade');
       
             }
 
