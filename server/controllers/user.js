@@ -73,7 +73,7 @@ exports.postSignUp = function(req,res){
 
             user.save();
 
-            res.render('reg.jade');
+            res.render('reg');
       
             }
 

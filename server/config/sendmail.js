@@ -39,6 +39,7 @@ smtpTransport.sendMail(mailOptions, function (error, response) {
       else {
           res.render('sendmail', { title: 'Send Mail', msg: 'Message sent! Thank you.', err: false, page: 'sendmail' });
           console.log('sent');
+          res.redirect('/');
       }
   });
 }

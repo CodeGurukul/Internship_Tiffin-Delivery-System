@@ -25,8 +25,17 @@ html
     script(type='text/javascript')
       
   body
-     .contact
+    .header
       .container
+        .top-header
+          .header-left
+            p Dabbawala Service
+          .login-section
+            ul
+              li
+                a(href='/') Home
+    .contact
+      .container.text-center
         .contact-form
           .contact-info
             h3  COMPOSE YOUR MAIL
@@ -38,15 +47,15 @@ html
               p
                 label(for='name') Name:
                 br
-                input(name='name', type='text', value='', id='name')
+                input(name='name', type='text',placeholder='Enter Your name', id='name')
               p
                 label(for='email') Email:
                 br
-                input(name='email', type='text', value='', id='email')
+                input(name='email', type='text', placeholder='Enter E-mail ID ', id='email')
               p
                 label(for='message') Message:
                 br
-                textarea(name='message', cols='40', rows='10', id='message')
+                textarea(name='message', cols='40', rows='10', placeholder='Message ',id='message')
               p
                 input(name='submit', type='submit', value='Send', id='submit')
 
