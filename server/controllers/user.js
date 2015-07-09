@@ -150,6 +150,15 @@ exports.postCheckOut = function(req,res, next){
          }
 
 exports.postContact = function(req,res){
+  if(req.body.veg)
+            var veg = true;
+  if(req.body.nonveg)
+            var nonveg = true;
+  if(req.body.lunch)
+            var lunch = true;
+  if(req.body.dinner)
+            var dinner = true;
+
   var contact1 = new Contact
         (
           {
@@ -157,7 +166,12 @@ exports.postContact = function(req,res){
             email: req.body.email,
             subject: req.body.subject,
             message: req.body.message,
-            location:''
+            location:'',
+            veg:veg,
+            nonveg:nonveg,
+            lunch:lunch,
+            dinner:dinner
+
           }
           );
             contact1.t_id=req.params.id;
