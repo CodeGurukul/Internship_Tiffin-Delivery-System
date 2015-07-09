@@ -6,7 +6,6 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
 
-
 //Require Models
 var Tiffin = require('./server/models/Tiffin');
 var Checkout = require('./server/models/Checkout');
@@ -24,7 +23,6 @@ var userController = require('./server/controllers/user');
 
 
 var app =express();
-
 
 
 app.set('views', __dirname + '/server/views');
@@ -73,6 +71,9 @@ app.get('/login', userController.getLogin);
 app.post('/contact', userController.postContact);
 app.get('/sendmail',sendMail.getSendMail);
 app.post('/sendmail',sendMail.postSendMail);
+app.get('/done',userController.getDone);
+app.post('/done',userController.postDone);
+
 
 
 

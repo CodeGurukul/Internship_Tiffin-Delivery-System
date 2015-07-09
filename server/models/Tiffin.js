@@ -13,9 +13,12 @@ var tiffinSchema = new mongoose.Schema({
   mobile: {type:String , required:true},
   tiffinBarcode: {type:String},  //entered by admin manually directly in the databse
   bagBarcode: {type:String},     //entered by admin manually directly in the databse
+  // location: {type:String},
 
   resetPasswordToken: String,
-  resetPasswordExpires: Date  
+  resetPasswordExpires: Date ,
+  contacts: [{ type: mongoose.Schema.Types.ObjectId, ref:'Contact'}]
+  
 });
 /**
  * Password hash middleware.
