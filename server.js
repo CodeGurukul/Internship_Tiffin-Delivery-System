@@ -5,6 +5,8 @@ var passport = require('passport');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
+
+
 //Require Models
 var Tiffin = require('./server/models/Tiffin');
 var Checkout = require('./server/models/Checkout');
@@ -13,9 +15,8 @@ var Contact = require('./server/models/Contact');
 var Admin = require('./server/models/Admin');
 
 
-
 var passportConf = require('./server/config/passport');
-
+var sendMail=require('./server/config/sendmail');
 
 
 var homeController = require('./server/controllers/home');
@@ -23,6 +24,8 @@ var userController = require('./server/controllers/user');
 
 
 var app =express();
+
+
 
 app.set('views', __dirname + '/server/views');
 app.set('view engine','jade');
@@ -68,6 +71,8 @@ app.get('/orders', userController.getOrders);
 app.post('/login', userController.postLogin);
 app.get('/login', userController.getLogin);
 app.post('/contact', userController.postContact);
+app.get('/sendmail',sendMail.getSendMail);
+app.post('/sendmail',sendMail.postSendMail);
 
 
 

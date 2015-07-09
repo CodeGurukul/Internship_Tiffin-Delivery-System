@@ -6,5 +6,5 @@ var checkoutSchema = new mongoose.Schema({
 });
 
 
-var Checkout = mongoose.model('Checkout',checkoutSchema);
+var Checkout= mongoose.model('Checkout',checkoutSchema);
 module.exports = Checkout;

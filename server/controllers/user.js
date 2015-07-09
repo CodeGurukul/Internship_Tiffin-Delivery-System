@@ -5,6 +5,7 @@ var Checkin = require('../models/Checkin');
 var Contact = require('../models/Contact');
 var Admin = require('../models/Admin');  
 
+
 exports.getLogin = function(req,res){
 
             res.render('login');
@@ -152,7 +153,7 @@ exports.postContact = function(req,res, next){
       
             }
 
+ 
             
-
 
 
