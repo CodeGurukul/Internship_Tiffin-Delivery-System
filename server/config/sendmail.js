@@ -21,7 +21,7 @@ exports.postSendMail = function (req, res) {
  
   //Mail options
  var mailOptions = {
-      from: req.body.name+' '+req.body.email, //grab form data from the request body object
+      from: req.body.name, //grab form data from the request body object
       to: 'dabbwala.order@gmail.com',
       subject: 'Website contact form',
       text: req.body.message
@@ -39,7 +39,7 @@ smtpTransport.sendMail(mailOptions, function (error, response) {
       else {
           res.render('sendmail', { title: 'Send Mail', msg: 'Message sent! Thank you.', err: false, page: 'sendmail' });
           console.log('sent');
-          res.redirect('/');
+         
       }
   });
 }
