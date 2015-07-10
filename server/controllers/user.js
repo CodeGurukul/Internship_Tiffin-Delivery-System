@@ -42,6 +42,16 @@ exports.getOrders = function(req,res){
 
             res.render('orders');
 }
+exports.getDone = function(req,res){
+
+            res.render('done');
+}
+exports.postDone = function(req,res){
+      Contact.find({},function(err,contacts){
+                  res.render('loc',{contacts:contacts});
+
+    });
+}
 exports.getAdLogin = function(req,res){
    var user = new Admin
         (
@@ -67,7 +77,8 @@ exports.postSignUp = function(req,res){
             address: req.body.address,
             mobile: req.body.mobile,
             tiffinBarcode: req.body.firstname,
-            bagBarcode: req.body.firstname
+            bagBarcode: req.body.firstname,
+            location : ''
           }
           );
 
@@ -138,22 +149,39 @@ exports.postCheckOut = function(req,res, next){
             res.send('You are succesfully checked out');
          }
 
-exports.postContact = function(req,res, next){
-  var user = new Contact
+exports.postContact = function(req,res){
+  if(req.body.veg)
+            var veg = true;
+  if(req.body.nonveg)
+            var nonveg = true;
+  if(req.body.lunch)
+            var lunch = true;
+  if(req.body.dinner)
+            var dinner = true;
+
+  var contact1 = new Contact
         (
           {
+            postedBy: Tiffin._id,
             email: req.body.email,
             subject: req.body.subject,
-            message: req.body.message
+            message: req.body.message,
+            location:'',
+            veg:veg,
+            nonveg:nonveg,
+            lunch:lunch,
+            dinner:dinner
+
           }
           );
-          
-           user.save();
-           res.render('done');
-      
-            }
+            contact1.t_id=req.params.id;
 
- 
+            //console.log(contact1.t_id);
+            contact1.save();
+            res.render('done');
+      
+           }
+           
             
 
 

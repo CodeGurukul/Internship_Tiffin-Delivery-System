@@ -54,7 +54,7 @@ html
           img(src='images/tiffin.jpg',alt='')
         .delivery.col-md-6.text-center
             h1 Free Home delivery
-            h2  In just 48 Hours!!
+            h2  In just 24 Hours!!
             br
             img.e(src='images/eat.jpg', width=600, height=200,alt='')
 
@@ -65,14 +65,33 @@ html
             h3  PLACE YOUR ORDER
             .strip-line
           form(action='/contact' method='post')
-            .contact-left
-              input.form-control(type='email' placeholder='Email' name="email" required)
-              br
-              input.form-control(type='text' placeholder='Address of the delivery' name="subject" required)
-            .contact-right
-              textarea.form-control(type='text' placeholder='Order Details' name="message" required)
-            .clearfix
-            button.btn.btn-default(type='submit') Submit
+            .row
+              .col-md-4
+                h3 Course
+                br
+                input(type="checkbox" name="lunch") 
+                |         Lunch  
+                br           
+                input(type="checkbox" name="dinner") 
+                |         Dinner             
+              .col-md-4
+                h3 Type
+                br
+                input(type="checkbox" name="veg") 
+                |         Veg    
+                br
+                input(type="checkbox" name="nonveg") 
+                |         Non-Veg              
+              .col-md-4
+                input.form-control(type='email' placeholder='Email' name="email" required)
+                br
+                input.form-control(type='text' placeholder='Address of the delivery' name="subject" required)
+                br
+                textarea.form-control(type='text' placeholder='Order Details' name="message" required)
+                br
+              .clearfix
+              .col-md-2.col-md-offset-5
+                button.btn.btn-default(type='submit') Submit
     // //contact-page
     // footer-top
     .footer-top
@@ -80,17 +99,7 @@ html
         .col-md-3.footer-grid
           h3
             a(href='#') Dabbawala
-        .col-md-3.footer-grid
-          h4 BUFFET
-          p
-            | MONDAY - THURSDAY
-            span 7 : 00 - 21 : 00
-        .col-md-3.footer-grid
-          h4 ORDERS
-          p
-            | MONDAY - SUNDAY
-            span 7 : 00 - 21 : 00
-        .col-md-3.footer-grid
+        .col-md-3.footer-grid.footer-right
           h4 ADDRESS
           ul Flowers Street,Andheri.
             li.list-one 
