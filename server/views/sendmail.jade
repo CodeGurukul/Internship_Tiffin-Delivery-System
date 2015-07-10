@@ -34,36 +34,112 @@ html
             ul
               li
                 a(href='/') Home
-    .contact
+   
+
+    .orderf
       .container
-        .contact-form
+    br
+  
+   .contact
+      .container
+          .order-pic.text-left
+             img(src='images/order.png', width=200,alt='')
+
           .contact-info
             h3  COMPOSE YOUR MAIL
             .strip-line
- 
+          br
 
-          form(action='/sendmail', name='sendmail', id='sendmail', method='post')
-            fieldset
-              p
-                label(for='name') Name:
-                br
-                input(name='name', type='text',placeholder='Enter Your name', id='name')
-              p
-                label(for='email') Email:
-                br
-                input(name='email', type='text', placeholder='Enter E-mail ID ', id='email')
-              p
-                label(for='message') Message:
-                br
-                textarea(name='message', cols='40', rows='10', placeholder='Message ',id='message')
-              p
-                input(name='submit', type='submit', value='Send', id='submit')
+   
+          .contact-form.col-md-6
+            form(action='/sendmail', name='sendmail', id='sendmail', method='post')
+              fieldset
+                p
+                  label(for='name') Name:
+                  br
+                  input(name='name', type='text',placeholder='Enter Your name', id='name')
+                p
+                  label(for='email') Email:
+                  br
+                  input(name='email', type='text', placeholder='Enter E-mail ID ', id='email')
+                p
+                  label(for='message') Message:
+                  br
+                  textarea(name='message', cols='40', rows='10', placeholder='Message ',id='message')
+                p
+                  input(name='submit', type='submit', value='Send', id='submit')
 
+
+          .del.col-md-6
+            img(src='images/girl.jpg',alt='')
+        
+      .msg.col-md-offset-1
         if(typeof msg !== 'undefined')
           if(!!err)
             div(class='msgbox err') #{msg}
           else
             div(class='msgbox success') #{msg}
+
+         
+
+    .footer-top
+      .container
+        .col-md-3.footer-grid
+          h3
+            a(href='#') Dabbawala
+        .col-md-3.footer-grid.footer-right
+          h4 ADDRESS
+          ul Flowers Street,Andheri.
+            li.list-one 
+            li.list-two
+              a(href='mailto:info@example.com') dabbawala.order@gmail.com
+            li.list-three +8 800 555 555 55
+        .clearfix
+    // //footer-top
+    // footer
+    .footer
+      .container
+        .footer-left
+          p
+            | © Dabbawala Service
+        .footer-right
+          ul
+            li
+              a.twitter(href='#')  
+            li
+              a.facebook(href='#')  
+            li
+              a.chrome(href='#')  
+            li
+              a.pinterest(href='#')  
+            li
+              a.linkedin(href='#')  
+            li
+              a.dribbble(href='#')  
+        .clearfix
+    // //footer
+    // smooth scrolling
+    script(type='text/javascript').
+      $(document).ready(function() {
+      /*
+      var defaults = {
+      containerID: 'toTop', // fading element id
+      containerHoverID: 'toTopHover', // fading element hover id
+      scrollSpeed: 1200,
+      easingType: 'linear'
+      };
+      */
+      $().UItoTop({ easingType: 'easeOutQuart' });
+      });
+    a#toTop(href='#', style='display: block;')
+      span#toTopHover(style='opacity: 1;')  
+    // //smooth scrolling
+
+    script(type="text/javascript", src="/vendor/jquery/dist/jquery.js")
+    script(type="text/javascript", src="/vendor/bootstrap/dist/js/bootstrap.js")
+    script(type="text/javascript", src="/vendor/toastr/toastr.min.js")
+
+
 
     script(type="text/javascript", src="/vendor/jquery/dist/jquery.js")
     script(type="text/javascript", src="/vendor/bootstrap/dist/js/bootstrap.js")

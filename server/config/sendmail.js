@@ -32,12 +32,12 @@ exports.postSendMail = function (req, res) {
 smtpTransport.sendMail(mailOptions, function (error, response) {
       //Email not sent
       if (error) {
-          res.render('sendmail', { title: 'Send Mail', msg: 'Error occured, message not sent.', err: true, page: 'sendmail' });
+          res.render('sendmail', { msg: 'Error occured, message not sent.', err: true, page: 'sendmail' });
           console.log(error);
       }
       //Yay!! Email sent
       else {
-          res.render('sendmail', { title: 'Send Mail', msg: 'Message sent! Thank you.', err: false, page: 'sendmail' });
+          res.render('sendmail', { msg: 'Message sent! Thank you.', err: false, page: 'sendmail' });
           console.log('sent');
          
       }

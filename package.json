@@ -31,7 +31,11 @@
     "mongodb": "^2.0.35",
     "mongoose": "^4.0.6",
     "node": "0.0.0",
+<<<<<<< Updated upstream
     "nodemailer": "^0.7.1",
+=======
+    "nodemailer": "^1.4.0",
+>>>>>>> Stashed changes
     "passport": "^0.2.2",
     "passport-facebook": "^2.0.0",
     "passport-local": "^1.0.0"
