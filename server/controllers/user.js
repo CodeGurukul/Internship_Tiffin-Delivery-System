@@ -166,7 +166,7 @@ exports.postContact = function(req,res){
             email: req.body.email,
             subject: req.body.subject,
             message: req.body.message,
-            location:'',
+            location:'Borivali',
             veg:veg,
             nonveg:nonveg,
             lunch:lunch,

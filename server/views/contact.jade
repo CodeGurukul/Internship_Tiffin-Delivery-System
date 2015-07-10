@@ -1,7 +1,7 @@
 html
   head
     title
-      | Dabbawala Service
+      | Dabbawala Service | Order
     // fonts
     link(href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Slabo+27px', rel='stylesheet', type='text/css')
@@ -90,8 +90,18 @@ html
                 textarea.form-control(type='text' placeholder='Order Details' name="message" required)
                 br
               .clearfix
-              .col-md-2.col-md-offset-5
+              .col-md-1.col-md-offset-5
                 button.btn.btn-default(type='submit') Submit
+    .container
+      .contact-info 
+        h3  VIEW YOUR TIFFIN LOCATION
+        .strip-line
+      form(action='/done' method='post')
+        .col-md-2.col-md-offset-5
+          button.btn.btn-default(type='submit') View location of Tiffin
+    .container
+      .contact-info 
+          
     // //contact-page
     // footer-top
     .footer-top
@@ -150,4 +160,3 @@ html
     script(type="text/javascript", src="/vendor/jquery/dist/jquery.js")
     script(type="text/javascript", src="/vendor/bootstrap/dist/js/bootstrap.js")
     script(type="text/javascript", src="/vendor/toastr/toastr.min.js")
-
