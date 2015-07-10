@@ -21,10 +21,10 @@ exports.postSendMail = function (req, res) {
  
   //Mail options
  var mailOptions = {
-      from: req.body.name, //grab form data from the request body object
+      from: req.body.name,//grab form data from the request body object
       to: 'dabbwala.order@gmail.com',
       subject: 'Website contact form',
-      text: req.body.message
+      text: req.body.name+' <'+req.body.email+'>\r\n\r\n'+req.body.message
   };
    
  console.log(mailOptions);
