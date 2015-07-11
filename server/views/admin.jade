@@ -46,23 +46,28 @@ html
           
           
           .clearfix
+    br
+    br
     // //header
     // banner
     
     .container
       .row
-        .col-md-6.col-md-offset-4
+        .col-md-2
+          img(src='images/box3.jpeg',alt='')
+        
+        .col-md-6.col-md-offset-3
             
           form(action='/checkin' method='post')
             input.form-control(type='' placeholder='Enter tiffin code' name="tiffinBarcode")
             input.form-control(type='' placeholder='Enter bag code' name="bagBarcode")
-
+            br
             button.a(href='/checkin') Check In
 
           form(action='/checkout' method='post')
             input.form-control(type='' placeholder='Enter tiffin code' name="tiffinBarcode")
             input.form-control(type='' placeholder='Enter bag code' name="bagBarcode")
-  
+            br
             button.a(class='button' href='/checkout') Check Out
 
     // footer-top
